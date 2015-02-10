@@ -48,10 +48,10 @@ def parse_bg_img(doc):
                     print('Doc %s has a background image that is not in riak %s' % (doc['id'], img['path'] ))
             else:
                 print ('Doc %s has no background image in solr. Title: %s' % (doc['id'], doc['title']))
-
-            return None
     else:
         print ('There are no images for doc %s' % doc['id'])
+
+    return None
 
 def img_exists(path):
     obj = riakBucket.get(path)
